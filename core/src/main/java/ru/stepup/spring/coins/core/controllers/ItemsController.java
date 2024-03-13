@@ -24,7 +24,7 @@ public class ItemsController {
 
     @GetMapping("/{id}")
     public ItemDto findById(@PathVariable Long id) {
-        return itemsService.findById(id).map(item -> new ItemDto(item.getId(), item.getTitle())).orElseThrow(() -> new ResourceNotFoundException("Не найден предмет с id: " + id));
+        return itemsService.findById(id).map(item -> new ItemDto(item.getId(), item.getTitle())).orElseThrow(() -> new ResourceNotFoundException("ITEM_NOT_FOUND", "Не найден предмет с id: " + id));
     }
 
     @GetMapping

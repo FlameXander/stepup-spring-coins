@@ -26,7 +26,7 @@ public class ExecutorIntegrationRestTemplate implements ExecutorIntegration {
     public CoinsExecuteDtoRs execute(ExecuteCoinsRequest executeCoinsRequest) {
         try {
             CoinsExecuteDtoRq coinsExecuteDtoRq = new CoinsExecuteDtoRq(
-                    executeCoinsRequest.number(),
+                    executeCoinsRequest.receiverNumber(),
                     executeCoinsRequest.productId(),
                     executeCoinsRequest.productType()
             );

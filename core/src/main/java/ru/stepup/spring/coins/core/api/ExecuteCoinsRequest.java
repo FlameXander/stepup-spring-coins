@@ -1,7 +1,7 @@
 package ru.stepup.spring.coins.core.api;
 
 public record ExecuteCoinsRequest(
-        String number,
+        String receiverNumber,
         String productId,
         String productType
 ) {

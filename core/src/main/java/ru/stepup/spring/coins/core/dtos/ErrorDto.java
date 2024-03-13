@@ -1,38 +1,15 @@
 package ru.stepup.spring.coins.core.dtos;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import java.time.LocalDateTime;
 
+@Data
+@NoArgsConstructor
 public class ErrorDto {
     private String code;
     private String message;
     private LocalDateTime date;
-
-    public String getCode() {
-        return code;
-    }
-
-    public void setCode(String code) {
-        this.code = code;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
-    public LocalDateTime getDate() {
-        return date;
-    }
-
-    public void setDate(LocalDateTime date) {
-        this.date = date;
-    }
-
-    public ErrorDto() {
-    }
 
     public ErrorDto(String code, String message) {
         this.code = code;
